@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #f5f5f5;
+    --foreground: #0a0a0a;
+    --muted: #e0e0e0;
+    --muted-foreground: #66717d;
+    --accent: #0D9488;
+    --accent-foreground: #ffffff;
+    --border: #d2cdd8;
+    --card: #ffffff;
+    --card-foreground: #0a0a0a;
+  }
+
+  .dark {
+    --background: #0a0a0a;
+    --foreground: #f5f5f5;
+    --muted: #1a1919;
+    --muted-foreground: #888888;
+    --accent: #0D9488;
+    --accent-foreground: #ffffff;
+    --border: #262626;
+    --card: #141414;
+    --card-foreground: #f5f5f5;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ── Sidebar: hide scrollbar while keeping it scrollable ── */
+.sidebar-no-scroll {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE / Edge (legacy) */
+}
+.sidebar-no-scroll::-webkit-scrollbar {
+  display: none;                /* Chrome / Safari / Opera */
+}
